@@ -20,11 +20,11 @@ $(window).scroll(function() {
 
 
 
-$('div.main_header h1').click(function() {
+// $('div.main_header h1').click(function() {
 
   // $( "div.sub_header" ).slideToggle( "fast", function() {
     // Animation complete.
-  });
+  // });
 
 
   //  window.alert("sometext");
@@ -49,7 +49,7 @@ $('div.main_header h1').click(function() {
 
   // $('body').toggleClass('page_closed');
 
-})
+// })
 
 // $('').hover(function() {
 //     //  window.alert("sometext");
