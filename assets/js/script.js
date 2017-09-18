@@ -22,7 +22,7 @@ $(window).scroll(function() {
 
 $('div.main_header h1').click(function() {
 
-  $( "div.sub_header" ).slideToggle( "fast", function() {
+  // $( "div.sub_header" ).slideToggle( "fast", function() {
     // Animation complete.
   });
 

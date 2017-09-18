@@ -11783,7 +11783,7 @@ body nav .menu ul li > ul li a:hover {
 }
 body section#sw_body_wrapper section#sw_header {
   position: fixed;
-  width: 95%;
+  width: calc(100% - 70px);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06);
   opacity: 1;
 }
@@ -11812,8 +11812,8 @@ body section#sw_body_wrapper section#sw_header div.main_header div.main_actions 
 }
 body section#sw_body_wrapper section#sw_header div.sub_header {
   background: #fff;
+  border-top: 1px solid #EFF3F6;
   padding: 0px 32px;
-  display: none;
 }
 body section#sw_body_wrapper section#sw_header div.sub_header ul {
   margin: 0;
@@ -11844,7 +11844,7 @@ body section#sw_body_wrapper section#sw_header div.scrollHeader {
 }
 body section#sw_body_wrapper section#sw_body {
   padding: 16px;
-  padding-top: 100px;
+  padding-top: 160px;
 }
 
 /*# sourceMappingURL=style.css.map */
