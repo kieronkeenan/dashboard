@@ -1,0 +1,146 @@
+
+/* Clearfix
+============================================*/
+@mixin clearfix()
+{
+    *zoom:1;    
+    &:before, &:after
+    {
+        content:"";
+        display:table;
+    }
+    &:after
+    {
+        clear:both;
+    }
+}
+
+.clearfix
+{
+	@include clearfix();
+}
+
+/* Border box
+============================================*/
+@mixin border-box()
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Rounded corners shortcut
+============================================*/
+@mixin rounded($radius)
+{
+	@include border-top-radius($radius);
+	@include border-bottom-radius($radius);
+	@include border-left-radius($radius);
+	@include border-right-radius($radius);
+}
+
+/* Slight Border For Buttons
+============================================*/
+@mixin border()
+{
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin light-text-shadow()
+{
+	text-shadow: 0px 1px 0px rgb(235, 235, 235);
+}
+
+@mixin background_cover()
+{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Remove list styles for menus
+============================================*/
+@mixin nav-menu()
+{
+	list-style-type: none;
+	margin-right:0;
+	margin-bottom:0;
+	padding-left:0;
+}
+
+@mixin extra_trans()
+{
+	transition:all .3s ease-in; 
+    -o-transition:all .3s ease-in; 
+    -moz-transition:all .3s ease-in; 
+    -webkit-transition:all .3s ease-in;
+}
+
+@mixin greyscale()
+{
+	opacity: 1;
+	transition: all 0.1s ease-in;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	&:hover{
+		opacity: 1;
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+	    filter: gray; /* IE6-9 */
+	    -webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	}
+	-webkit-transform: translateZ(0);
+
+}
+
+@mixin gradient_bg()
+{
+	background-color: $white;
+
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7f7f7), to($white));
+
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, $white, #f7f7f7);
+
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, $white, #f7f7f7);
+
+	/* IE 10 */
+	background: -ms-linear-gradient(top, $white, #f7f7f7);
+
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, $white, #f7f7f7);
+}
+
+/* Buttons
+============================================*/
+@mixin button_1()
+{
+	@include rounded(4px);
+	// @include border();
+	background: $color2_1;
+	color: $white;
+	white-space: nowrap;
+	font-family: $font-heading2;
+	display: block;
+	text-align: center;
+	&:hover{
+		background: $color2_2;
+	}
+}
+
+// @mixin button_2()
+// {
+// 	font-family: $font-body2;
+// 	@include rounded(4px);
+// 	// border: 1px solid rgba(255, 255, 255, 0.3);
+// 	background: $color2_2;
+// 	color: $white;
+// 	white-space: nowrap;
+// 	&:hover{
+// 		background: $color2_1;
+// 	}
+// }

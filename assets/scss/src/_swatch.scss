@@ -1,0 +1,66 @@
+/**
+ * Site Colours
+ */
+
+$white: #fff;
+$white1_1_1: rgba(255, 255, 255, 0.1);
+$white1_1: rgba(255, 255, 255, 0.2);
+$white1_2: rgba(255, 255, 255, 0.4);
+$white1_3: rgba(255, 255, 255, 0.6);
+$white1_4: rgba(255, 255, 255, 0.8);
+
+
+ /* Link colors */
+$link: #2EC0FA;
+$link_hover: darken($link,10%);
+
+
+
+/* Default Colors */
+$grey_bg: #EFF3F6;
+$grey_light: #F8FAFB;
+$grey_regular: #CCD7DE;
+$grey_dark: #7C8D97;
+$grey_border: $grey_regular;
+
+$blue: #5BC9F4;
+$red: #E84A50;
+$green: #12B796;
+$green_hover: darken($green,10%);
+
+
+/* Custom Colors */
+
+$color1_1: #0F2234; //
+$color1_2: darken($color1_1,10%); //
+
+$color2_1: #12B796;
+$color2_2: darken($color2_1,10%); //
+$color2_3: rgba(18,183,150,0.3);
+
+
+/* Select colors */
+$select: $color2_3;
+$select_color: $color2_1;
+
+
+/* Notice Colours */
+$warning:				#F98E2D;
+$warning-color: 		darken($warning,8%);
+$warning-background:	lighten($warning,45%);
+$warning-border: 		darken($warning,8%);
+
+$danger:				$red;
+$danger-color: 			darken($danger,8%);
+$danger-background:		lighten($danger,25%);
+$danger-border: 		darken(adjust-hue($danger-background, -10), 5%);
+
+$info:					$blue;
+$info-color: 			darken($info,20%);
+$info-background:		lighten($info,45%);
+$info-border: 			darken(adjust-hue($info-background, -10), 5%);
+
+$success:				$green;
+$success-color: 		darken($success,20%);
+$success-background:	lighten($success,30%);
+$success-border: 		darken(adjust-hue($success-background, -10), 5%);

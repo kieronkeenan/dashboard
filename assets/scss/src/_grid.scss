@@ -1,0 +1,70 @@
+/* GRID OPTIONS
+ * Add customizations for the grid here
+/* ========================================================== */
+$gutter_width: 30px; // Your gutter width
+$columns: 12; // The amount of columns you want
+$max_width: 100%; // Set a maximum width of the site. Design for 1000px but breakpoint for larger screens.
+
+// Half the gutter for borders, margin, padding etc
+$gutter: $gutter_width*0.5;
+
+// Defaults which you can freely override
+$column-width: 60;
+$gutter-width: 20;
+$columns: 12;
+
+// Set $total-width to 100% for a fluid layout
+$total-width: 100%;
+
+// Half the gutter for borders, margin, padding etc
+$gutter: $gutter_width*0.5;
+
+/* Utility variable — you should never need to modify this */
+$padding: $gutter_width*0.5;
+$correction: 0.5 / $max_width * 100 * 1%; // NOTE: Check this in IE
+$gridsystem-width: ($column-width*$columns) + ($gutter-width*$columns);
+$margin: $total-width*(($gutter-width*.5)/$gridsystem-width);
+
+
+$size_0: 4px;
+$size_1: 8px;
+$size_2: 16px;
+$size_3: 24px;
+$size_4: 32px;
+$size_5: 40px;
+$size_6: 48px;
+
+/* Our row container */
+@mixin row($padding:0)
+{
+	@include clearfix();
+	@include border-box();
+
+	display:block;
+	max-width: $max_width;
+	margin: 0;
+	padding:0 $padding;
+}
+
+/* Our column container */
+@mixin column($x, $columns:$columns)
+{
+	display: inline;
+	float: left;
+
+	width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / $gridsystem-width);
+
+	margin: 0 $total-width*(($gutter-width*.5)/$gridsystem-width);
+}
+
+/* Push adds left padding */
+@mixin push($offset:1, $columns:$columns)
+{
+	margin-left: 100%*($offset / $columns);
+}
+
+/* Pull adds right padding */
+@mixin pull($offset:1, $columns:$columns)
+{
+	margin-right: 100%*($offset / $columns);
+}
